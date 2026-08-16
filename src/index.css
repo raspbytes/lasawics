@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Manrope', sans-serif;
+}
+
+@import "tailwindcss";
+@theme {
+  /* Official LASA WiCS Color Palette definitions */
+  --color-wics-dark: #050b4a;      /* The deep navy logo background */
+  --color-wics-pink: #ff1267;      /* The hot electric coral/pink */
+  --color-wics-magenta: #e100e6;   /* The bright neon magenta/purple */
+  --color-wics-light: #d6dae6; 
+  --color-wics-lime: #c8de51;
+  --color-wics-bpink: #faccdf;  /* Lime green */
+
+}
