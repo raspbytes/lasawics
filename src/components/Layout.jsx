@@ -1,9 +1,9 @@
 export default function Layout({ children }) {
   return (
-    <div className="flex min-h-screen flex-col bg-slate-50 text-slate-800 antialiased selection:bg-purple-200">
+    <div className="flex min-h-screen flex-col bg-slate-50 text-slate-800 antialiased selection:bg-wics-lime-200">
       
     {/* NAVBAR */}
-      <nav className="sticky top-0 z-50 border-b border-purple-100 bg-white/80 backdrop-blur-md">
+      <nav className="sticky top-0 z-50 border-b border-wics-light bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <div className="flex items-center gap-2">
             <span className="text-xl font-extrabold tracking-tight text-wics-dark">LASA WiCS+</span>
