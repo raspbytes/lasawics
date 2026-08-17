@@ -82,28 +82,24 @@ export default function Terminal() {
   // updates panel position, mouseup stops. We attach move/up to `window`
   // (not the title bar) so dragging still works if the cursor moves fast.
   function handleDragStart(e) {
-    dragState.current = {
-      startX: e.clientX,
-      startY: e.clientY,
-      panelX: panel.pos.x,
-      panelY: panel.pos.y,
-    };
+    e.preventDefault(); 
+    
     window.addEventListener("mousemove", handleDragMove);
     window.addEventListener("mouseup", handleDragEnd);
+
   }
 
   function handleDragMove(e) {
-    if (!dragState.current) return;
-    const dx = e.clientX - dragState.current.startX;
-    const dy = e.clientY - dragState.current.startY;
     setPanel((p) => ({
       ...p,
-      pos: { x: dragState.current.panelX + dx, y: dragState.current.panelY + dy },
+      pos: {
+        x: p.pos.x + e.movementX,
+        y: p.pos.y + e.movementY,
+      },
     }));
   }
 
   function handleDragEnd() {
-    dragState.current = null;
     window.removeEventListener("mousemove", handleDragMove);
     window.removeEventListener("mouseup", handleDragEnd);
   }
