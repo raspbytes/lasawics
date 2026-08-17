@@ -44,6 +44,7 @@ export default function Layout({ children }) {
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 md:flex-row">
           <p className="text-xs text-slate-400">
             &copy; {new Date().getFullYear()} LASA Women in Computer Science. All rights reserved.
+            This website is currently maintained by Sarah Shafi.
           </p>
           <div className="flex gap-6 text-xs text-slate-400">
             <a href="#" className="hover:text-purple-600 transition-colors">Contact</a>
