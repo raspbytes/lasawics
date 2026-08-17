@@ -1,6 +1,6 @@
 export default function Layout({ children }) {
   return (
-    <div className="flex min-h-screen flex-col bg-slate-50 text-slate-800 antialiased selection:bg-wics-lime-200">
+    <div className="flex min-h-screen flex-col bg-slate-50 text-slate-800 antialiased selection:bg-lime-200">
       
     {/* NAVBAR */}
       <nav className="sticky top-0 z-50 border-b border-wics-light bg-white/80 backdrop-blur-md">
@@ -11,7 +11,6 @@ export default function Layout({ children }) {
           
           <div className="hidden items-center gap-8 md:flex">
             <a href="#" className="text-sm font-medium text-wics-dark/80 transition-colors hover:text-wics-pink">Home</a>
-            <a href="#" className="text-sm font-medium text-wics-dark/80 transition-colors hover:text-wics-pink">Events</a>
             <a href="#" className="text-sm font-medium text-wics-dark/80 transition-colors hover:text-wics-pink">Resources</a>
             <a href="#" className="text-sm font-medium text-wics-dark/80 transition-colors hover:text-wics-pink">About Us</a>
             <a href="#" className="text-sm font-medium text-wics-dark/80 transition-colors hover:text-wics-pink">Calendar</a>
