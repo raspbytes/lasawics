@@ -103,6 +103,5 @@ export default function App() {
         </div>
       </section>
     </Layout>
-    {/*had to comment smmt*/}
   )
 }
