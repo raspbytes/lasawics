@@ -1,5 +1,19 @@
 import { Link } from "react-router-dom"
+if (typeof window !== 'undefined') {
+  const errorHandler = window.onerror;
+  window.onerror = function (message, source, lineno, colno, error) {
+    if (message && message.includes('ResizeObserver loop')) {
+      return true; // Prevents the error overlay from popping up
+    }
+    if (errorHandler) return errorHandler(message, source, lineno, colno, error);
+  };
 
+  window.addEventListener('error', (e) => {
+    if (e.message && e.message.includes('ResizeObserver loop')) {
+      e.stopImmediatePropagation();
+    }
+  });
+}
 
 export default function Layout({ children }) {
   return (

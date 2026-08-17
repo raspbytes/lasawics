@@ -1,6 +1,7 @@
 import Layout from "../components/Layout"
 import Terminal from "../components/Terminal"
 
+
 export default function About() {
   return (
     <Layout>
