@@ -18,7 +18,7 @@ export default function About() {
          <div className="mt-10 w-full max-w-2xl drop-shadow-xl">
           <Terminal />
         </div>
-        
+
       </div>
     </Layout>
   )
