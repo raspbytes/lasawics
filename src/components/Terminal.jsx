@@ -38,11 +38,10 @@ const CAPTAINS = {
 // Regular hardcoded commands. Add more keys here as you build out pages.
 const COMMANDS = {
   whoami: () => "wics_member",
-  ls: () => "captains/  events/  resources/  opportunities/  hacks/",
-  help: () => "about   captains   events   resources   opportunities   hacks   clear",
-  about: () =>
-    "LASA WiCS+ is a student-led community supporting women and underrepresented\nindividuals in computer science.",
-  captains: () => Object.keys(CAPTAINS).join("  "),
+  ls: () => "captains/ events/ resources/ opportunities/ hacks/",
+  help: () => "about captains events resources opportunities hacks clear",
+  about: () => "LASA WiCS+ is a student-led community supporting women and underrepresented\nindividuals in computer science.",
+  captains: () => Object.keys(CAPTAINS).join(" "),
   events: () => "Welcome Meeting (9/2) -> Intro to Programming (9/9). See /events for the full list.",
   resources: () => "Check the Resources page for slide decks, guides, and past workshop materials.",
   opportunities: () => "Internships, competitions, and volunteering -> see /opportunities",
@@ -62,9 +61,7 @@ export default function Terminal() {
   const inputRef = useRef(null);
 
   // The floating panel. `key` is which captain is open (or null = closed).
-  // `pos` is where the panel sits on screen, updated live while dragging.
   const [panel, setPanel] = useState({ key: null, pos: { x: 60, y: 40 } });
-  const dragState = useRef(null);
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight });
@@ -78,15 +75,11 @@ export default function Terminal() {
     setPanel((p) => ({ ...p, key: null }));
   }
 
-  // --- Dragging: mousedown on the title bar starts tracking, mousemove
-  // updates panel position, mouseup stops. We attach move/up to `window`
-  // (not the title bar) so dragging still works if the cursor moves fast.
+  // --- Smooth Dragging Fix (No Crashes / Loop Locks) ---
   function handleDragStart(e) {
-    e.preventDefault(); 
-    
+    e.preventDefault(); // Stop text highlights while moving mouse
     window.addEventListener("mousemove", handleDragMove);
     window.addEventListener("mouseup", handleDragEnd);
-
   }
 
   function handleDragMove(e) {
@@ -105,7 +98,6 @@ export default function Terminal() {
   }
 
   useEffect(() => {
-    // Cleanup in case the component unmounts mid-drag
     return () => {
       window.removeEventListener("mousemove", handleDragMove);
       window.removeEventListener("mouseup", handleDragEnd);
@@ -124,7 +116,6 @@ export default function Terminal() {
     }
 
     let outputText;
-
     if (cmd.startsWith("captains/")) {
       const key = cmd.split("/")[1];
       const captain = CAPTAINS[key];
@@ -173,8 +164,8 @@ export default function Terminal() {
   return (
     <div className="relative w-full max-w-2xl font-mono text-sm">
       {/* Terminal window */}
-      <div
-        className="rounded-xl overflow-hidden border border-[#2a2a52] shadow-xl"
+      <div 
+        className="rounded-xl overflow-hidden border border-[#2a2a52] shadow-xl" 
         style={{ backgroundColor: "#12123a" }}
         onClick={() => inputRef.current?.focus()}
       >
@@ -186,17 +177,15 @@ export default function Terminal() {
         </div>
 
         <div ref={scrollRef} className="px-4 py-4 h-72 overflow-y-auto space-y-1">
-          {history.map((line, i) =>
-            line.type === "input" ? (
-              <div key={i} className="text-[#e8e8f5]">
-                <span className="text-[#cbf078]">$</span> {line.text}
-              </div>
-            ) : (
-              <div key={i} className="text-[#8888b0] whitespace-pre-wrap pl-4">
-                {line.text}
-              </div>
-            )
-          )}
+          {history.map((line, i) => line.type === "input" ? (
+            <div key={i} className="text-[#e8e8f5]">
+              <span className="text-[#cbf078]">$</span> {line.text}
+            </div>
+          ) : (
+            <div key={i} className="text-[#8888b0] whitespace-pre-wrap pl-4">
+              {line.text}
+            </div>
+          ))}
 
           <div className="flex items-center text-[#e8e8f5]">
             <span className="text-[#cbf078] mr-2">$</span>
@@ -215,17 +204,17 @@ export default function Terminal() {
 
       {/* Floating "text editor" panel for an open captain bio */}
       {openCaptainData && (
-        <div
-          className="absolute w-80 rounded-lg overflow-hidden border border-[#2a2a52] shadow-2xl select-none"
+        <div 
+          className="absolute w-96 rounded-lg overflow-hidden border border-[#2a2a52] shadow-2xl select-none"
           style={{ left: panel.pos.x, top: panel.pos.y, backgroundColor: "#1a1a45" }}
         >
-          <div
+          <div 
             className="flex items-center justify-between px-3 py-2 cursor-grab active:cursor-grabbing border-b border-[#2a2a52]"
             style={{ backgroundColor: "#0f0f2e" }}
             onMouseDown={handleDragStart}
           >
             <span className="text-[#cbf078] text-xs">captains/{panel.key}.txt</span>
-            <button
+            <button 
               onClick={closePanel}
               className="text-[#8888b0] hover:text-[#f0538a] px-1 leading-none"
               aria-label="Close"

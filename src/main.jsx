@@ -3,8 +3,8 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 
-import Layout from "../components/Layout"
-import Terminal from "../components/Terminal"
+import Layout from "./components/Layout"
+import Terminal from "./components/Terminal"
 if (typeof window !== 'undefined') {
   const errorHandler = window.onerror;
   window.onerror = function (message, source, lineno, colno, error) {
