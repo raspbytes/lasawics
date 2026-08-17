@@ -1,12 +1,16 @@
 import Layout from "./components/Layout"
 import wicsLogo from "./assets/logowics.png"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { useRef } from "react"
 
-export default function App() {
+import About from "./pages/About"
+
+function Home(){
   const eventsSectionRef = useRef(null)
   const scrollToEvents = () => {
     eventsSectionRef.current?.scrollIntoView({ behavior: "smooth" })
   }
+
   return (
     <Layout>
       {/* {children} space gets filled here */}
@@ -103,5 +107,15 @@ export default function App() {
         </div>
       </section>
     </Layout>
+  )
+}
+export default function App() {
+  return(
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
   )
 }

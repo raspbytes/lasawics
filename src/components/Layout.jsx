@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom"
+
+
 export default function Layout({ children }) {
   return (
     <div className="flex min-h-screen flex-col bg-slate-50 text-slate-800 antialiased selection:bg-lime-200">
@@ -10,9 +13,9 @@ export default function Layout({ children }) {
           </div>
           
           <div className="hidden items-center gap-8 md:flex">
-            <a href="#" className="text-sm font-medium text-wics-dark/80 transition-colors hover:text-wics-pink">Home</a>
+            <Link to="/" className="text-sm font-medium text-wics-dark/80 transition-colors hover:text-wics-pink">Home</Link>
             <a href="#" className="text-sm font-medium text-wics-dark/80 transition-colors hover:text-wics-pink">Resources</a>
-            <a href="#" className="text-sm font-medium text-wics-dark/80 transition-colors hover:text-wics-pink">About Us</a>
+            <Link to="/about" className="text-sm font-medium text-wics-dark/80 transition-colors hover:text-wics-pink">About</Link>
             <a href="#" className="text-sm font-medium text-wics-dark/80 transition-colors hover:text-wics-pink">Calendar</a>
             <a href="#" className="text-sm font-medium text-wics-dark/80 transition-colors hover:text-wics-pink">Leaderboard</a>
             <a href="#" className="text-sm font-medium text-wics-dark/80 transition-colors hover:text-wics-pink">Sponsors</a>
