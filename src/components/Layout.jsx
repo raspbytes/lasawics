@@ -36,7 +36,7 @@ export default function Layout({ children }) {
           </div>
 
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfE8BkX6xExl37-vPL1IEqQUA4k8uf9E4WQMLviwjJcFRBAPQ/viewform?usp=dialog"
+            href="https://lasawics-five.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
