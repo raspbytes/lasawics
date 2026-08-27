@@ -72,7 +72,7 @@ function Home(){
             {/* Glassmorphic thing EC 1 */}
             <div className="relative group overflow-hidden bg-white/70 backdrop-blur-md border border-slate-200/60 rounded-2xl p-6 shadow-sm transition-all duration-300 hover:shadow-xl hover:border-pink-200">
               <div className="absolute top-0 right-0 bg-pink-500 text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-bl-xl">
-                In 3 weeks
+                In 2 weeks
               </div>
               <span className="text-xs font-semibold text-pink-600 tracking-wide uppercase">All-open Meeting</span>
               <h3 className="text-lg font-bold text-slate-800 mt-2 leading-snug">Welcome to LASA WiCS!</h3>

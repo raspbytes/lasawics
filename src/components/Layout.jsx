@@ -41,7 +41,7 @@ export default function Layout({ children }) {
             rel="noopener noreferrer"
           >
             <button className="rounded-full bg-wics-dark px-4 py-2 text-sm font-semibold text-wics-light transition-all hover:bg-wics-pink active:scale-95 shadow-sm shadow-wics-light">
-              Join Club
+              members hub
             </button>
           </a>
 
