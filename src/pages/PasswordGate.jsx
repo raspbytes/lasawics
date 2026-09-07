@@ -21,9 +21,10 @@ export default function PasswordGate() {
     }
   }
 
-  // 🔓 If password is correct, bypass the form and display the portal!
+ 
   if (isAuthenticated) {
-    return <MembersHub />
+    window.location.href = "https://vercel.app"
+    return null
   }
 
   return (
