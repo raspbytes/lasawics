@@ -6,7 +6,7 @@ import About from "./pages/About"
 import PasswordGate from "./pages/PasswordGate" 
 import MembersHub from "./pages/MembersHub" 
 import Sponsors from "./pages/Sponsors" 
-import Contact from "./pages/Contact" 
+import Contact from "./pages/Contact"
 
 function Home() { 
   const eventsSectionRef = useRef(null) 
@@ -16,23 +16,22 @@ function Home() {
 
   return ( 
     <Layout> 
-      
-      {/* ─── HERO SECTION (Kept clean with exactly 2 side-by-side children) ─── */}
       <div className="flex flex-col items-center justify-between gap-12 md:flex-row py-8"> 
-        
-        {/* Left Hand Content Block */}
         <div className="max-w-2xl"> 
           <span className="text-xs font-bold uppercase tracking-widest text-wics-dark bg-wics-pink/10 px-2.5 py-1 rounded-md"> 
             Welcome to LASA WiCS+ 
           </span> 
+          
           <h1 className="mt-4 text-4xl font-black tracking-tight text-slate-900 sm:text-5xl"> 
             <span className="transition-all duration-300 hover:text-wics-pink cursor-default">Build,</span>{" "}
             <span className="transition-all duration-300 hover:text-blue-600 cursor-default">Learn,</span>{" "}
             <span className="transition-all duration-300 hover:text-wics-magenta cursor-default">Connect.</span> 
           </h1> 
+          
           <p className="mt-4 text-lg text-slate-500 leading-relaxed"> 
             We are a student-led community dedicated to supporting women and underrepresented individuals in computer science one step at a time. We offer workshops, projects, presentations, and host many events throughout the year with the goal of making CS as accessible as we can. 
           </p> 
+          
           <div className="mt-8 flex gap-4"> 
             <button 
               onClick={scrollToEvents} 
@@ -46,7 +45,26 @@ function Home() {
           </div> 
         </div> 
 
-        {/* Right Hand Logo Block */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 bg-wics-dark text-white p-8 rounded-3xl my-16 text-center shadow-lg">
+  <div>
+    <p className="text-3xl font-black text-wics-lime">50+</p>
+    <p className="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Active Members</p>
+  </div>
+  <div>
+    <p className="text-3xl font-black text-wics-pink">12+</p>
+    <p className="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Annual Workshops</p>
+  </div>
+  <div>
+    <p className="text-3xl font-black text-wics-magenta">$0</p>
+    <p className="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Cost to Join</p>
+  </div>
+  <div>
+    <p className="text-3xl font-black text-white">100%</p>
+    <p className="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Student Led</p>
+  </div>
+</div>
+
+
         <div className="order-first md:order-last w-64 h-64 sm:w-80 sm:h-80 shrink-0"> 
           <img 
             src={wicsLogo} 
@@ -54,30 +72,8 @@ function Home() {
             className="w-full h-full object-contain transition-all duration-300 hover:scale-105 hover:rotate-6 hover:drop-shadow-[4px_4px_0px_#faccdf] hover:drop-shadow-[-4px_-4px_0px_#c8de51] cursor-pointer" 
           /> 
         </div> 
-
-      </div> {/* Hero wrapper ends here cleanly */}
-
-      {/* ─── NEW: ANIMATED METRIC IMPACT BAR (Placed outside the hero so it scales full-width!) ─── */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 bg-wics-dark text-white p-8 rounded-3xl my-16 text-center shadow-lg border border-slate-800/50"> 
-        <div> 
-          <p className="text-3xl font-black text-wics-lime">50+</p> 
-          <p className="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Active Members</p> 
-        </div> 
-        <div> 
-          <p className="text-3xl font-black text-wics-pink">12+</p> 
-          <p className="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Annual Workshops</p> 
-        </div> 
-        <div> 
-          <p className="text-3xl font-black text-wics-magenta">$0</p> 
-          <p className="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Cost to Join</p> 
-        </div> 
-        <div> 
-          <p className="text-3xl font-black text-white">100%</p> 
-          <p className="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Student Led</p> 
-        </div> 
       </div> 
 
-      {/* ─── UPCOMING EVENTS CARD PANEL ─── */}
       <section ref={eventsSectionRef} id="events" className="w-full bg-slate-50/50 py-16 px-6 sm:px-12 flex flex-col items-center rounded-3xl mt-12 border border-slate-100"> 
         <div className="max-w-6xl w-full"> 
           <div className="mb-10 text-center md:text-left"> 
@@ -86,7 +82,6 @@ function Home() {
           </div> 
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> 
-            
             {/* Card 1 */} 
             <div className="relative group overflow-hidden bg-white/70 backdrop-blur-md border border-slate-200/60 rounded-2xl p-6 shadow-sm transition-all duration-300 hover:shadow-xl hover:border-pink-200"> 
               <div className="absolute top-0 right-0 bg-pink-500 text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-bl-xl"> In 1 week </div> 
@@ -112,7 +107,6 @@ function Home() {
                 </Link> 
               </div> 
             </div> 
-
           </div> 
         </div> 
       </section> 
