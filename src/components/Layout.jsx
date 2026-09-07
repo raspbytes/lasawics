@@ -43,6 +43,7 @@ export default function Layout({ children }) {
       {/* ─── FOOTER SHELL ─── */}
       <footer className="border-t border-slate-200 bg-white py-6 mt-auto text-center text-xs text-slate-400">
         &copy; {new Date().getFullYear()} LASA WiCS+
+        This front-facing website is currently maintained by Sarah Shafi.
       </footer>
 
     </div>
