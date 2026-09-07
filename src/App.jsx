@@ -6,7 +6,7 @@ import About from "./pages/About"
 import PasswordGate from "./pages/PasswordGate" 
 import MembersHub from "./pages/MembersHub" 
 import Sponsors from "./pages/Sponsors" 
-import Contact from "./pages/Contact"
+import Contact from "./pages/Contact" 
 
 function Home() { 
   const eventsSectionRef = useRef(null) 
@@ -16,6 +16,8 @@ function Home() {
 
   return ( 
     <Layout> 
+      
+      {/* ─── 1. HERO REGION CONTAINER (Text & Logo only) ─── */}
       <div className="flex flex-col items-center justify-between gap-12 md:flex-row py-8"> 
         <div className="max-w-2xl"> 
           <span className="text-xs font-bold uppercase tracking-widest text-wics-dark bg-wics-pink/10 px-2.5 py-1 rounded-md"> 
@@ -45,35 +47,36 @@ function Home() {
           </div> 
         </div> 
 
-
         <div className="order-first md:order-last w-64 h-64 sm:w-80 sm:h-80 shrink-0"> 
           <img 
             src={wicsLogo} 
             alt="LASA WiCS Logo" 
-            className="w-full h-full object-contain drop-shadow-2xl animate-pulse transition-all duration-300 hover:scale-105 hover:rotate-6 cursor-pointer" 
+            className="w-full h-full object-contain drop-shadow-2xl transition-all duration-300 hover:scale-105 hover:rotate-6 cursor-pointer" 
           /> 
         </div> 
       </div> 
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 bg-wics-dark text-white p-8 rounded-3xl my-16 text-center shadow-lg">
-  <div>
-    <p className="text-3xl font-black text-wics-lime">...</p>
-    <p className="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Active Members</p>
-  </div>
-  <div>
-    <p className="text-3xl font-black text-wics-pink">12+</p>
-    <p className="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Annual Workshops</p>
-  </div>
-  <div>
-    <p className="text-3xl font-black text-wics-magenta">4</p>
-    <p className="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Annual Events</p>
-  </div>
-  <div>
-    <p className="text-3xl font-black text-white">100%</p>
-    <p className="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Student Led</p>
-  </div>
-</div>
+      {/* ─── 2. STATS IMPACT BANNER BAR ─── */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 bg-wics-dark text-white p-8 rounded-3xl my-16 text-center shadow-lg"> 
+        <div className="transition-transform duration-300 hover:scale-105"> 
+          <p className="text-3xl font-black text-wics-lime">...</p> 
+          <p className="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Active Members</p> 
+        </div> 
+        <div className="transition-transform duration-300 hover:scale-105"> 
+          <p className="text-3xl font-black text-wics-pink">12+</p> 
+          <p className="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Annual Workshops</p> 
+        </div> 
+        <div className="transition-transform duration-300 hover:scale-105"> 
+          <p className="text-3xl font-black text-wics-magenta">4</p> 
+          <p className="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Annual Events</p> 
+        </div> 
+        <div className="transition-transform duration-300 hover:scale-105"> 
+          <p className="text-3xl font-black text-white">100%</p> 
+          <p className="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Student Led</p> 
+        </div> 
+      </div> 
 
+      {/* ─── 3. UPCOMING EVENTS TIMELINE ─── */}
       <section ref={eventsSectionRef} id="events" className="w-full bg-slate-50/50 py-16 px-6 sm:px-12 flex flex-col items-center rounded-3xl mt-12 border border-slate-100"> 
         <div className="max-w-6xl w-full"> 
           <div className="mb-10 text-center md:text-left"> 
