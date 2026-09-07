@@ -45,7 +45,17 @@ function Home() {
           </div> 
         </div> 
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 bg-wics-dark text-white p-8 rounded-3xl my-16 text-center shadow-lg">
+
+        <div className="order-first md:order-last w-64 h-64 sm:w-80 sm:h-80 shrink-0"> 
+          <img 
+            src={wicsLogo} 
+            alt="LASA WiCS Logo" 
+            className="w-full h-full object-contain drop-shadow-2xl animate-pulse transition-all duration-300 hover:scale-105 hover:rotate-6 cursor-pointer" 
+          /> 
+        </div> 
+      </div> 
+
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 bg-wics-dark text-white p-8 rounded-3xl my-16 text-center shadow-lg">
   <div>
     <p className="text-3xl font-black text-wics-lime">...</p>
     <p className="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Active Members</p>
@@ -63,16 +73,6 @@ function Home() {
     <p className="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Student Led</p>
   </div>
 </div>
-
-
-        <div className="order-first md:order-last w-64 h-64 sm:w-80 sm:h-80 shrink-0"> 
-          <img 
-            src={wicsLogo} 
-            alt="LASA WiCS Logo" 
-            className="w-full h-full object-contain drop-shadow-2xl animate-pulse transition-all duration-300 hover:scale-105 hover:rotate-6 cursor-pointer" 
-          /> 
-        </div> 
-      </div> 
 
       <section ref={eventsSectionRef} id="events" className="w-full bg-slate-50/50 py-16 px-6 sm:px-12 flex flex-col items-center rounded-3xl mt-12 border border-slate-100"> 
         <div className="max-w-6xl w-full"> 
