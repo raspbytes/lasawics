@@ -63,6 +63,7 @@ function Home() {
           </div> 
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> 
+            
             {/* Card 1 */}
             <div className="relative group overflow-hidden bg-white/70 backdrop-blur-md border border-slate-200/60 rounded-2xl p-6 shadow-sm transition-all duration-300 hover:shadow-xl hover:border-pink-200"> 
               <div className="absolute top-0 right-0 bg-pink-500 text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-bl-xl"> In 1 week </div> 
@@ -83,9 +84,13 @@ function Home() {
               <p className="text-sm text-slate-500 mt-2 leading-relaxed">Crash course on the fundamentals of programming, IDEs, and debugging + details on leaderboard/membership</p> 
               <div className="flex justify-between items-center mt-6 pt-4 border-t border-slate-100"> 
                 <span className="text-xs text-slate-400 font-medium">9/9 • Rm. 505 Lunch</span> 
-                <span className="text-xs font-bold text-slate-700 group-hover:text-blue-600 transition-colors flex items-center gap-1 cursor-pointer"> Visit the Members Hub! <span>→</span> </span> 
+                {/* 🛠️ Fixed: Wrapped your text link cleanly inside a router Link container targeting the password gate route */}
+                <Link to="/members" className="text-xs font-bold text-slate-700 group-hover:text-blue-600 transition-colors flex items-center gap-1 cursor-pointer"> 
+                  Visit the Members Hub! <span>→</span> 
+                </Link> 
               </div> 
             </div> 
+
           </div> 
         </div> 
       </section> 
