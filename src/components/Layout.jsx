@@ -9,11 +9,8 @@ export default function Layout({ children }) {
   <Link to="/" className="text-sm font-medium text-wics-dark/80 transition-colors hover:text-wics-pink">Home</Link> 
   
   {/* Changed href="#" to href="/resources" or keep them as standard placeholders without snap actions */}
-  <Link to="/resources" className="text-sm font-medium text-wics-dark/80 transition-colors hover:text-wics-pink">Resources</Link> 
+  <Link to="/contact" className="text-sm font-medium text-wics-dark/80 transition-colors hover:text-wics-pink">Get in Touch</Link> 
   <Link to="/about" className="text-sm font-medium text-wics-dark/80 transition-colors hover:text-wics-pink">About</Link> 
-  
-  <Link to="/calendar" className="text-sm font-medium text-wics-dark/80 transition-colors hover:text-wics-pink">Calendar</Link> 
-  <Link to="/leaderboard" className="text-sm font-medium text-wics-dark/80 transition-colors hover:text-wics-pink">Leaderboard</Link> 
   <Link to="/sponsors" className="text-sm font-medium text-wics-dark/80 transition-colors hover:text-wics-pink">Sponsors</Link> 
 </div> 
 

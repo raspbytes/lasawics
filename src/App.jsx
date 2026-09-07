@@ -4,6 +4,7 @@ import Layout from "./components/Layout"
 import wicsLogo from "./assets/logowics.png" 
 import About from "./pages/About" 
 import PasswordGate from "./pages/PasswordGate" 
+import MembersHub from "./pages/MembersHub"
 
 function Home() { 
   const eventsSectionRef = useRef(null) 
