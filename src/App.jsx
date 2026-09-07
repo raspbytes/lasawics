@@ -5,6 +5,7 @@ import wicsLogo from "./assets/logowics.png"
 import About from "./pages/About" 
 import PasswordGate from "./pages/PasswordGate" 
 import MembersHub from "./pages/MembersHub"
+import Sponsors from "./pages/Sponsors"
 
 function Home() { 
   const eventsSectionRef = useRef(null) 
@@ -100,6 +101,7 @@ export default function App() {
         <Route path="/" element={<Home />} /> 
         <Route path="/about" element={<About />} /> 
         <Route path="/members" element={<PasswordGate />} /> 
+        <Route path="/sponsors" element={<Sponsors />} /> 
       </Routes> 
     </BrowserRouter> 
   ) 
