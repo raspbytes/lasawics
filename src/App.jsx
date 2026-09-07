@@ -1,11 +1,12 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom" 
-import { useRef } from "react"
+// 🛠️ Fixed: Added missing 'Link' to the routing engine import statement below
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom" 
+import { useRef } from "react" 
 import Layout from "./components/Layout" 
 import wicsLogo from "./assets/logowics.png" 
 import About from "./pages/About" 
 import PasswordGate from "./pages/PasswordGate" 
-import MembersHub from "./pages/MembersHub"
-import Sponsors from "./pages/Sponsors"
+import MembersHub from "./pages/MembersHub" 
+import Sponsors from "./pages/Sponsors" 
 
 function Home() { 
   const eventsSectionRef = useRef(null) 
@@ -21,7 +22,6 @@ function Home() {
             Welcome to LASA WiCS+ 
           </span> 
           
-          {/* Fixed: Swapped "class" to "className" on your inline heading sections */}
           <h1 className="mt-4 text-4xl font-black tracking-tight text-slate-900 sm:text-5xl"> 
             <span className="transition-all duration-300 hover:text-wics-pink cursor-default">Build,</span>{" "}
             <span className="transition-all duration-300 hover:text-blue-600 cursor-default">Learn,</span>{" "}
@@ -33,7 +33,6 @@ function Home() {
           </p> 
           
           <div className="mt-8 flex gap-4"> 
-            {/* Fixed: Consolidated the double className parameters into a unified styling container */}
             <button 
               onClick={scrollToEvents} 
               className="bg-slate-900 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 hover:bg-slate-800 hover:shadow-lg hover:shadow-indigo-900/10 active:scale-95"
@@ -63,8 +62,7 @@ function Home() {
           </div> 
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> 
-            
-            {/* Card 1 */}
+            {/* Card 1 */} 
             <div className="relative group overflow-hidden bg-white/70 backdrop-blur-md border border-slate-200/60 rounded-2xl p-6 shadow-sm transition-all duration-300 hover:shadow-xl hover:border-pink-200"> 
               <div className="absolute top-0 right-0 bg-pink-500 text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-bl-xl"> In 1 week </div> 
               <span className="text-xs font-semibold text-pink-600 tracking-wide uppercase">All-open Meeting</span> 
@@ -76,7 +74,7 @@ function Home() {
               </div> 
             </div> 
 
-            {/* Card 2 */}
+            {/* Card 2 */} 
             <div className="relative group overflow-hidden bg-white/70 backdrop-blur-md border border-slate-200/60 rounded-2xl p-6 shadow-sm transition-all duration-300 hover:shadow-xl hover:border-blue-200"> 
               <div className="absolute top-0 right-0 bg-blue-500 text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-bl-xl"> In 4 Weeks </div> 
               <span className="text-xs font-semibold text-blue-600 tracking-wide uppercase">Basics</span> 
@@ -84,13 +82,11 @@ function Home() {
               <p className="text-sm text-slate-500 mt-2 leading-relaxed">Crash course on the fundamentals of programming, IDEs, and debugging + details on leaderboard/membership</p> 
               <div className="flex justify-between items-center mt-6 pt-4 border-t border-slate-100"> 
                 <span className="text-xs text-slate-400 font-medium">9/9 • Rm. 505 Lunch</span> 
-                {/* 🛠️ Fixed: Wrapped your text link cleanly inside a router Link container targeting the password gate route */}
                 <Link to="/members" className="text-xs font-bold text-slate-700 group-hover:text-blue-600 transition-colors flex items-center gap-1 cursor-pointer"> 
                   Visit the Members Hub! <span>→</span> 
                 </Link> 
               </div> 
             </div> 
-
           </div> 
         </div> 
       </section> 
@@ -102,7 +98,6 @@ export default function App() {
   return ( 
     <BrowserRouter> 
       <Routes> 
-        {/* Fixed: Erased the accidental duplicate mappings inside your route list */}
         <Route path="/" element={<Home />} /> 
         <Route path="/about" element={<About />} /> 
         <Route path="/members" element={<PasswordGate />} /> 
