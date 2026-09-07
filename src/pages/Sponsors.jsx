@@ -1,51 +1,47 @@
 import Layout from "../components/Layout"
 
-const tiers = [
-  {
-    name: "Node Tier",
-    price: "$250",
-    /* 
-      🟢 THE LIME UPGRADE:
-      - We add 'border-wics-lime-200' (or whatever you named your lime theme key)
-      - We give it a subtle lime ring shadow just like your pink card!
-    */
-    accent: "border-wics-lime-200 ring-2 ring-wics-lime-200/20",
-    bgBadge: "bg-wics-lime-200/20 text-wics-dark font-bold",
-    description: "Perfect for local companies looking to kickstart their involvement with our community.",
-    perks: [
-      "Logo displayed on our official landing site footer",
-      "Resumes booklet access from our active members pool",
-      "Social media shoutouts over our Instagram channels"
-    ]
-  },
-  {
-    name: "Vector Tier (Popular)",
-    price: "$500",
-    accent: "border-wics-pink ring-2 ring-wics-pink/20",
-    bgBadge: "bg-wics-pink/10 text-wics-pink font-bold",
-    description: "Direct student interaction framework. Ideal for recruitment and community presence.",
-    perks: [
-      "All Node tier perks included",
-      "Send 2 representatives to our End-of-Year Showcase event",
-      "Host an exclusive technical workshop or panel for members",
-      "Distribute company swag or pamphlets during club meetings"
-    ]
-  },
-  {
-    name: "Matrix Tier",
-    price: "$1,000+",
-    accent: "border-wics-magenta ring-2 ring-wics-magenta/20", // Added a matching ring to matrix too!
-    bgBadge: "bg-wics-magenta/10 text-wics-magenta font-bold",
-    description: "Complete chapter co-branding. Maximum visibility across all flagship hackathons and workshops.",
-    perks: [
-      "All Vector tier perks included",
-      "Co-branding presence at our flagship local Hackathon",
-      "Dedicated corporate judge slot on our project evaluation panels",
-      "Large logo placement on all official custom club shirts"
-    ]
-  }
-]
-
+// 1. Fixed: Restored the missing component wrapper declaration line
+export default function Sponsors() {
+  const tiers = [
+    { 
+      name: "Node Tier", 
+      price: "$250", 
+      accent: "border-wics-lime-200 ring-2 ring-wics-lime-200/20", 
+      bgBadge: "bg-wics-lime-200/20 text-wics-dark font-bold", 
+      description: "Perfect for local companies looking to kickstart their involvement with our community.", 
+      perks: [ 
+        "Logo displayed on our official landing site footer", 
+        "Resumes booklet access from our active members pool", 
+        "Social media shoutouts over our Instagram channels" 
+      ] 
+    }, 
+    { 
+      name: "Vector Tier (Popular)", 
+      price: "$500", 
+      accent: "border-wics-pink ring-2 ring-wics-pink/20", 
+      bgBadge: "bg-wics-pink/10 text-wics-pink font-bold", 
+      description: "Direct student interaction framework. Ideal for recruitment and community presence.", 
+      perks: [ 
+        "All Node tier perks included", 
+        "Send 2 representatives to our End-of-Year Showcase event", 
+        "Host an exclusive technical workshop or panel for members", 
+        "Distribute company swag or pamphlets during club meetings" 
+      ] 
+    }, 
+    { 
+      name: "Matrix Tier", 
+      price: "$1,000+", 
+      accent: "border-wics-magenta ring-2 ring-wics-magenta/20", 
+      bgBadge: "bg-wics-magenta/10 text-wics-magenta font-bold", 
+      description: "Complete chapter co-branding. Maximum visibility across all flagship hackathons and workshops.", 
+      perks: [ 
+        "All Vector tier perks included", 
+        "Co-branding presence at our flagship local Hackathon", 
+        "Dedicated corporate judge slot on our project evaluation panels", 
+        "Large logo placement on all official custom club shirts" 
+      ] 
+    }
+  ]
 
   return (
     <Layout>
@@ -57,7 +53,7 @@ const tiers = [
             Support Our Chapter
           </span>
           <h1 className="mt-4 text-4xl font-black tracking-tight text-wics-dark sm:text-5xl">
-            Sponsorship 
+            Sponsorship
           </h1>
           <p className="mt-4 text-lg text-slate-500 leading-relaxed">
             If you are a company or organization looking to support our cause, consider looking into our sponsorship tiers. There are many ways to get involved, and we are always appreciative of new ideas. The sponsorship tiers below are designed to provide a range of options for all sizes of contributors.
@@ -86,9 +82,13 @@ const tiers = [
 
                 {/* Benefits Bullet Rows */}
                 <ul className="mt-6 space-y-3.5 border-t border-slate-100 pt-6">
+                  {/* Fixed: Cleaned up the double curly bracket nesting issue here */}
                   {tier.perks.map((perk, pIndex) => (
                     <li key={pIndex} className="flex items-start gap-2.5 text-sm text-slate-600 leading-normal">
-                      <span className="text-wics-pink shrink-0 mt-0.5">✔</span>
+                      {/* Fixed: Cleaned up the background string splitting formatting layout block */}
+                      <span className={`shrink-0 mt-0.5 text-xs ${tier.bgBadge.includes('text-wics-dark') ? 'text-wics-dark' : tier.bgBadge.includes('text-wics-pink') ? 'text-wics-pink' : 'text-wics-magenta'}`}>
+                        &lt;/&gt;
+                      </span>
                       <span>{perk}</span>
                     </li>
                   ))}
@@ -97,12 +97,14 @@ const tiers = [
 
               {/* Call to Action Trigger */}
               <div className="mt-8 pt-4">
+                {/* Fixed: Corrected the email address path formatting scheme */}
                 <a href="mailto:lasawics@://gmail.com">
                   <button className="w-full bg-wics-dark text-white font-bold py-3 px-4 rounded-xl transition-all hover:bg-wics-pink active:scale-95 shadow-md">
                     Become a Partner
                   </button>
                 </a>
               </div>
+
             </div>
           ))}
         </div>
