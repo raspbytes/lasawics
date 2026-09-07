@@ -41,7 +41,7 @@ export default function Sponsors() {
         "All Vector tier perks included", 
         "Co-branding presence at our annual chapter Hackathon", 
         "Dedicated corporate judge slot on event panels", 
-        "Logo placement on all official custom club merchandise and event banners" 
+        "Logo placement on all official custom club merchandise and event banners",
         "Host either a dedicated recruitment booth or a special award category at our annual hackathon event"
       ] 
     }
