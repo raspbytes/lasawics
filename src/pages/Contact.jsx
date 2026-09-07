@@ -12,12 +12,12 @@ export default function Contact() {
 
     try {
       // 📬 Fixed: Pointed endpoint straight to Web3Forms official JSON collection funnel pipeline
-      const response = await fetch("https://web3forms.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
+      const response = await fetch("https://api.web3forms.com/submit", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    Accept: "application/json",
+  },
         body: JSON.stringify({
           access_key: "a8010e34-4bb8-485b-a375-2a0c52745f4a", // Your active API token key!
           name: formData.name,
