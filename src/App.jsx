@@ -65,7 +65,7 @@ function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> 
             {/* Card 1 */}
             <div className="relative group overflow-hidden bg-white/70 backdrop-blur-md border border-slate-200/60 rounded-2xl p-6 shadow-sm transition-all duration-300 hover:shadow-xl hover:border-pink-200"> 
-              <div className="absolute top-0 right-0 bg-pink-500 text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-bl-xl"> In 2 weeks </div> 
+              <div className="absolute top-0 right-0 bg-pink-500 text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-bl-xl"> In 1 week </div> 
               <span className="text-xs font-semibold text-pink-600 tracking-wide uppercase">All-open Meeting</span> 
               <h3 className="text-lg font-bold text-slate-800 mt-2 leading-snug">Welcome to LASA WiCS!</h3> 
               <p className="text-sm text-slate-500 mt-2 leading-relaxed">First meeting of the year, get to know captains, commitments, and a general overview of the club.</p> 
@@ -83,7 +83,7 @@ function Home() {
               <p className="text-sm text-slate-500 mt-2 leading-relaxed">Crash course on the fundamentals of programming, IDEs, and debugging + details on leaderboard/membership</p> 
               <div className="flex justify-between items-center mt-6 pt-4 border-t border-slate-100"> 
                 <span className="text-xs text-slate-400 font-medium">9/9 • Rm. 505 Lunch</span> 
-                <span className="text-xs font-bold text-slate-700 group-hover:text-blue-600 transition-colors flex items-center gap-1 cursor-pointer"> Visit the Members Hub for Slides! <span>→</span> </span> 
+                <span className="text-xs font-bold text-slate-700 group-hover:text-blue-600 transition-colors flex items-center gap-1 cursor-pointer"> Visit the Members Hub! <span>→</span> </span> 
               </div> 
             </div> 
           </div> 
