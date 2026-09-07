@@ -83,7 +83,7 @@ function Home() {
               <p className="text-sm text-slate-500 mt-2 leading-relaxed">Crash course on the fundamentals of programming, IDEs, and debugging + details on leaderboard/membership</p> 
               <div className="flex justify-between items-center mt-6 pt-4 border-t border-slate-100"> 
                 <span className="text-xs text-slate-400 font-medium">9/9 • Rm. 505 Lunch</span> 
-                <span className="text-xs font-bold text-slate-700 group-hover:text-blue-600 transition-colors flex items-center gap-1 cursor-pointer"> Slide Deck <span>→</span> </span> 
+                <span className="text-xs font-bold text-slate-700 group-hover:text-blue-600 transition-colors flex items-center gap-1 cursor-pointer"> Visit the Members Hub for Slides! <span>→</span> </span> 
               </div> 
             </div> 
           </div> 

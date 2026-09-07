@@ -5,15 +5,15 @@ export default function Sponsors() {
     { 
       name: "Node Tier", 
       price: "$250", 
-      /* 🟢 Fixed: Changed from wics-lime-200 to plain wics-lime to match your global index variable! */
+      
       accent: "border-wics-lime ring-2 ring-wics-lime/20", 
       bgBadge: "bg-wics-lime/20 text-wics-dark font-black", 
-      bulletColor: "text-wics-dark/70", // 👈 Fixed: Explicitly passed down clean color string classes for your check marks
+      bulletColor: "text-wics-dark/70", 
       description: "Perfect for local companies looking to kickstart their involvement with our community.", 
       perks: [ 
         "Logo displayed on our official landing site footer", 
         "Resumes booklet access from our active members pool", 
-        "Social media shoutouts over our Instagram channels" 
+        "Social media shoutouts on our Instagram posts" 
       ] 
     }, 
     { 
@@ -21,13 +21,13 @@ export default function Sponsors() {
       price: "$500", 
       accent: "border-wics-pink ring-2 ring-wics-pink/20", 
       bgBadge: "bg-wics-pink/10 text-wics-pink font-black", 
-      bulletColor: "text-wics-pink", // 👈 Fixed: Complete text color string for the pink arrows
+      bulletColor: "text-wics-pink", 
       description: "Direct student interaction framework. Ideal for recruitment and community presence.", 
       perks: [ 
         "All Node tier perks included", 
-        "Send 2 representatives to our End-of-Year Showcase event", 
+        "Send 2-4 representatives to our End-of-Year CS Showcase event", 
         "Host an exclusive technical workshop or panel for members", 
-        "Distribute company swag or pamphlets during club meetings" 
+        "Distribute company swag or pamphlets during club events" 
       ] 
     }, 
     { 
@@ -35,13 +35,14 @@ export default function Sponsors() {
       price: "$1,000+", 
       accent: "border-wics-magenta ring-2 ring-wics-magenta/20", 
       bgBadge: "bg-wics-magenta/10 text-wics-magenta font-black", 
-      bulletColor: "text-wics-magenta", // 👈 Fixed: Complete text color string for the magenta arrows
+      bulletColor: "text-wics-magenta", 
       description: "Complete chapter co-branding. Maximum visibility across all flagship hackathons and workshops.", 
       perks: [ 
         "All Vector tier perks included", 
-        "Co-branding presence at our flagship local Hackathon", 
-        "Dedicated corporate judge slot on our project evaluation panels", 
-        "Large logo placement on all official custom club shirts" 
+        "Co-branding presence at our annual chapter Hackathon", 
+        "Dedicated corporate judge slot on event panels", 
+        "Logo placement on all official custom club merchandise and event banners" 
+        "Host either a dedicated recruitment booth or a special award category at our annual hackathon event"
       ] 
     }
   ]
@@ -87,7 +88,7 @@ export default function Sponsors() {
                 <ul className="mt-6 space-y-3.5 border-t border-slate-100 pt-6">
                   {tier.perks.map((perk, pIndex) => (
                     <li key={pIndex} className="flex items-start gap-2.5 text-sm text-slate-600 leading-normal">
-                      {/* 🛠️ FIXED ARROW LOOP: Reads the clear color configuration properties flawlessly now */}
+                      
                       <span className={`shrink-0 mt-0.5 font-mono font-bold text-xs ${tier.bulletColor}`}>
                         &lt;/&gt;
                       </span>
