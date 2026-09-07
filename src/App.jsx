@@ -48,6 +48,7 @@ function Home() {
         </div> 
 
         <div className="order-first md:order-last w-64 h-64 sm:w-80 sm:h-80 shrink-0"> 
+
           <img 
             src={wicsLogo} 
             alt="LASA WiCS Logo" 
@@ -114,7 +115,7 @@ function Home() {
         </div> 
       </section> 
 
-      <section className="w-full max-w-4xl mx-auto my-24 px-6 animate-fade-in">
+     <section className="w-full max-w-4xl mx-auto my-24 px-6 animate-fade-in">
   {/* SECTION HEADING */}
   <div className="text-center max-w-xl mx-auto mb-10">
     <span className="text-[10px] font-bold uppercase tracking-widest text-wics-magenta bg-wics-magenta/10 px-2.5 py-1 rounded-md font-mono">
@@ -123,16 +124,16 @@ function Home() {
     <h2 className="text-3xl font-black text-wics-dark mt-3">Frequently Asked Questions</h2>
   </div>
   
-  {/* ACCORDION COMPONENT CONTAINER */}
+  {/* ACCORDION CONTAINER */}
   <div className="space-y-4">
     
-    {/* FAQ ACCORDION ITEM 1 */}
+    {/* FAQ ITEM 1 */}
     <details className="group overflow-hidden bg-white border border-slate-200/80 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:border-wics-pink/30 [&_summary::-webkit-details-marker]:hidden">
-      {/* Question Header Line */}
-      <summary className="flex items-center justify-between p-5 font-bold text-slate-800 cursor-pointer select-none list-none group-open:bg-slate-50/50">
+      {/* Question Header Line (Background transitions subtly when opened!) */}
+      <summary className="flex items-center justify-between p-5 font-bold text-slate-800 cursor-pointer select-none list-none transition-colors duration-300 group-open:bg-slate-50/60">
         <span>Do I need coding experience to join?</span>
-        {/* Animated Chevron: Rotates perfectly when parent details container opens */}
-        <span className="text-wics-pink font-mono text-sm transition-transform duration-300 group-open:rotate-90">
+        {/* Neon Pink Indicator: Rotates from 0 to 90 degrees when opened */}
+        <span className="text-wics-pink font-mono text-sm transition-transform duration-300 transform group-open:rotate-90">
           ▶
         </span>
       </summary>
@@ -142,11 +143,11 @@ function Home() {
       </div>
     </details>
 
-    {/* FAQ ACCORDION ITEM 2 */}
-    <details className="group overflow-hidden bg-white border border-slate-200/80 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:border-wics-blue/30 [&_summary::-webkit-details-marker]:hidden">
-      <summary className="flex items-center justify-between p-5 font-bold text-slate-800 cursor-pointer select-none list-none group-open:bg-slate-50/50">
+    {/* FAQ ITEM 2 */}
+    <details className="group overflow-hidden bg-white border border-slate-200/80 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:border-blue-200/40 [&_summary::-webkit-details-marker]:hidden">
+      <summary className="flex items-center justify-between p-5 font-bold text-slate-800 cursor-pointer select-none list-none transition-colors duration-300 group-open:bg-slate-50/60">
         <span>When and where are the meetings?</span>
-        <span className="text-wics-magenta font-mono text-sm transition-transform duration-300 group-open:rotate-90">
+        <span className="text-wics-magenta font-mono text-sm transition-transform duration-300 transform group-open:rotate-90">
           ▶
         </span>
       </summary>
@@ -157,7 +158,6 @@ function Home() {
 
   </div>
 </section>
-
 
     </Layout> 
   ) 
