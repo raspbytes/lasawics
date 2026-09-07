@@ -23,7 +23,7 @@ export default function PasswordGate() {
 
  
   if (isAuthenticated) {
-    window.location.href = "https://vercel.app"
+    window.location.href = "https://lasawics-five.vercel.app"
     return null
   }
 
