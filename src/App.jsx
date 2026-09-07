@@ -114,21 +114,50 @@ function Home() {
         </div> 
       </section> 
 
-      <section className="w-full max-w-4xl mx-auto my-20 px-6 animate-fade-in">
-  <h2 className="text-2xl font-black text-wics-dark text-center mb-8">Frequently Asked Questions</h2>
+      <section className="w-full max-w-4xl mx-auto my-24 px-6 animate-fade-in">
+  {/* SECTION HEADING */}
+  <div className="text-center max-w-xl mx-auto mb-10">
+    <span className="text-[10px] font-bold uppercase tracking-widest text-wics-magenta bg-wics-magenta/10 px-2.5 py-1 rounded-md font-mono">
+      // knowledge_base
+    </span>
+    <h2 className="text-3xl font-black text-wics-dark mt-3">Frequently Asked Questions</h2>
+  </div>
   
+  {/* ACCORDION COMPONENT CONTAINER */}
   <div className="space-y-4">
-    <div className="bg-white border border-slate-200 p-5 rounded-2xl shadow-sm">
-      <h4 className="font-bold text-slate-800">Do I need coding experience to join?</h4>
-      <p className="text-sm text-slate-500 mt-2 leading-relaxed">Nope! We specialize in introductory crash courses. We guide our members through the fundamentals step-by-step.</p>
-    </div>
+    
+    {/* FAQ ACCORDION ITEM 1 */}
+    <details className="group overflow-hidden bg-white border border-slate-200/80 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:border-wics-pink/30 [&_summary::-webkit-details-marker]:hidden">
+      {/* Question Header Line */}
+      <summary className="flex items-center justify-between p-5 font-bold text-slate-800 cursor-pointer select-none list-none group-open:bg-slate-50/50">
+        <span>Do I need coding experience to join?</span>
+        {/* Animated Chevron: Rotates perfectly when parent details container opens */}
+        <span className="text-wics-pink font-mono text-sm transition-transform duration-300 group-open:rotate-90">
+          ▶
+        </span>
+      </summary>
+      {/* Answer Body text (Smooth fading entrance animation) */}
+      <div className="px-5 pb-5 pt-2 border-t border-slate-100/60 bg-white text-sm text-slate-500 leading-relaxed animate-fade-in">
+        Nope! We specialize in introductory crash courses. We guide our members through the fundamentals step-by-step.
+      </div>
+    </details>
 
-    <div className="bg-white border border-slate-200 p-5 rounded-2xl shadow-sm">
-      <h4 className="font-bold text-slate-800">When and where are the meetings?</h4>
-      <p className="text-sm text-slate-500 mt-2 leading-relaxed">We meet during lunch in Room 505. Check out our upcoming events card grid for the exact presentation dates!</p>
-    </div>
+    {/* FAQ ACCORDION ITEM 2 */}
+    <details className="group overflow-hidden bg-white border border-slate-200/80 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:border-wics-blue/30 [&_summary::-webkit-details-marker]:hidden">
+      <summary className="flex items-center justify-between p-5 font-bold text-slate-800 cursor-pointer select-none list-none group-open:bg-slate-50/50">
+        <span>When and where are the meetings?</span>
+        <span className="text-wics-magenta font-mono text-sm transition-transform duration-300 group-open:rotate-90">
+          ▶
+        </span>
+      </summary>
+      <div className="px-5 pb-5 pt-2 border-t border-slate-100/60 bg-white text-sm text-slate-500 leading-relaxed animate-fade-in">
+        We meet during lunch in Room 505. Check out our upcoming events card grid for the exact presentation dates!
+      </div>
+    </details>
+
   </div>
 </section>
+
 
     </Layout> 
   ) 
