@@ -47,7 +47,7 @@ function Home() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 bg-wics-dark text-white p-8 rounded-3xl my-16 text-center shadow-lg">
   <div>
-    <p className="text-3xl font-black text-wics-lime">50+</p>
+    <p className="text-3xl font-black text-wics-lime">...</p>
     <p className="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Active Members</p>
   </div>
   <div>
@@ -55,8 +55,8 @@ function Home() {
     <p className="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Annual Workshops</p>
   </div>
   <div>
-    <p className="text-3xl font-black text-wics-magenta">$0</p>
-    <p className="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Cost to Join</p>
+    <p className="text-3xl font-black text-wics-magenta">4</p>
+    <p className="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Annual Events</p>
   </div>
   <div>
     <p className="text-3xl font-black text-white">100%</p>
@@ -69,7 +69,7 @@ function Home() {
           <img 
             src={wicsLogo} 
             alt="LASA WiCS Logo" 
-            className="w-full h-full object-contain transition-all duration-300 hover:scale-105 hover:rotate-6 hover:drop-shadow-[4px_4px_0px_#faccdf] hover:drop-shadow-[-4px_-4px_0px_#c8de51] cursor-pointer" 
+            className="w-full h-full object-contain drop-shadow-2xl animate-pulse transition-all duration-300 hover:scale-105 hover:rotate-6 cursor-pointer" 
           /> 
         </div> 
       </div> 
@@ -89,7 +89,7 @@ function Home() {
               <h3 className="text-lg font-bold text-slate-800 mt-2 leading-snug">Welcome to LASA WiCS!</h3> 
               <p className="text-sm text-slate-500 mt-2 leading-relaxed">First meeting of the year, get to know captains, commitments, and a general overview of the club.</p> 
               <div className="flex justify-between items-center mt-6 pt-4 border-t border-slate-100"> 
-                <span className="text-xs text-slate-400 font-medium">9/2 • Rm. 505 Lunch </span> 
+                <span className="text-xs text-slate-400 font-medium">9/14 • Rm. 505 Lunch </span> 
                 <span className="text-xs font-bold text-slate-700 group-hover:text-pink-600 transition-colors flex items-center gap-1 cursor-pointer"> Slide Deck <span>→</span> </span> 
               </div> 
             </div> 
@@ -101,7 +101,7 @@ function Home() {
               <h3 className="text-lg font-bold text-slate-800 mt-2 leading-snug">Intro to Programming</h3> 
               <p className="text-sm text-slate-500 mt-2 leading-relaxed">Crash course on the fundamentals of programming, IDEs, and debugging + details on leaderboard/membership</p> 
               <div className="flex justify-between items-center mt-6 pt-4 border-t border-slate-100"> 
-                <span className="text-xs text-slate-400 font-medium">9/9 • Rm. 505 Lunch</span> 
+                <span className="text-xs text-slate-400 font-medium">9/28 • Rm. 505 Lunch</span> 
                 <Link to="/members" className="text-xs font-bold text-slate-700 group-hover:text-blue-600 transition-colors flex items-center gap-1 cursor-pointer"> 
                   Visit the Members Hub! <span>→</span> 
                 </Link> 
