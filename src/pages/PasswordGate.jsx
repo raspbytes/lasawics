@@ -36,7 +36,7 @@ export default function PasswordGate() {
         
         <h2 className="mt-4 text-2xl font-black text-wics-dark">Members Portal</h2>
         <p className="text-sm text-slate-400 mt-1 px-4">
-          Enter the member-exclusive club password to unlock internal club assets.
+          Enter the member-exclusive club password to unlock internal club assets. This is given at the first annual meeting, slated to be 9/14/26. 
         </p>
 
         <form onSubmit={handleSubmit} className="w-full mt-6 flex flex-col gap-3">
