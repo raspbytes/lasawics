@@ -113,6 +113,23 @@ function Home() {
           </div> 
         </div> 
       </section> 
+
+      <section className="w-full max-w-4xl mx-auto my-20 px-6 animate-fade-in">
+  <h2 className="text-2xl font-black text-wics-dark text-center mb-8">Frequently Asked Questions</h2>
+  
+  <div className="space-y-4">
+    <div className="bg-white border border-slate-200 p-5 rounded-2xl shadow-sm">
+      <h4 className="font-bold text-slate-800">Do I need coding experience to join?</h4>
+      <p className="text-sm text-slate-500 mt-2 leading-relaxed">Nope! We specialize in introductory crash courses. We guide our members through the fundamentals step-by-step.</p>
+    </div>
+
+    <div className="bg-white border border-slate-200 p-5 rounded-2xl shadow-sm">
+      <h4 className="font-bold text-slate-800">When and where are the meetings?</h4>
+      <p className="text-sm text-slate-500 mt-2 leading-relaxed">We meet during lunch in Room 505. Check out our upcoming events card grid for the exact presentation dates!</p>
+    </div>
+  </div>
+</section>
+
     </Layout> 
   ) 
 } 
