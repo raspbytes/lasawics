@@ -4,12 +4,42 @@ import Layout from "../components/Layout"
 export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", role: "Student", message: "" })
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false) // Keeps track of submission status
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // For now, this cleanly mimics a submission trigger!
-    setSubmitted(true)
-    setFormData({ name: "", email: "", role: "Student", message: "" })
+    setLoading(true)
+
+    try {
+      // 📬 Fixed: Pointed endpoint straight to Web3Forms official JSON collection funnel pipeline
+      const response = await fetch("https://web3forms.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "a8010e34-4bb8-485b-a375-2a0c52745f4a", // Your active API token key!
+          name: formData.name,
+          email: formData.email,
+          role: formData.role,
+          message: formData.message,
+        }),
+      })
+
+      const result = await response.json()
+      
+      if (result.success) {
+        setSubmitted(true)
+        setFormData({ name: "", email: "", role: "Student", message: "" })
+      } else {
+        alert("Something went wrong with Web3Forms. Please email us directly!")
+      }
+    } catch (err) {
+      alert("Network error. Please try sending a regular email instead!")
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -25,7 +55,7 @@ export default function Contact() {
             Get in Touch
           </h1>
           <p className="mt-3 text-base text-slate-500 max-w-xl">
-            Have questions about potential collaborations or outreach opportunities? Drop us a message through or form, or reach out otherwise. Our leadership team will get back to you ASAP!
+            Have questions about potential collaborations or outreach opportunities? Drop us a message through our form, or reach out otherwise. Our leadership team will get back to you ASAP!
           </p>
         </div>
 
@@ -50,6 +80,7 @@ export default function Contact() {
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-lg">⌖</span>
+                {/* Fixed: Linked directly to your official profile link path */}
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-wics-magenta transition-colors">
                   @lasawics
                 </a>
@@ -74,10 +105,10 @@ export default function Contact() {
           <div className="md:col-span-7 bg-white border border-slate-200/80 p-8 rounded-3xl shadow-xl shadow-slate-100/50">
             {submitted ? (
               <div className="text-center py-12 flex flex-col items-center animate-fade-in">
-                <span className="text-4xl">˗ˏˋ ꒰ ✉︎ ꒱ ˎˊ˗</span>
+                <span className="text-4xl text-wics-pink">˗ˏˋ ꒰ ✉︎ ꒱ ˎˊ˗</span>
                 <h3 className="text-2xl font-black text-wics-dark mt-4">Message Sent!</h3>
                 <p className="text-sm text-slate-400 mt-2 max-w-sm">
-                  Thank you for reaching out. Your entry has been succesfully submitted, and we will get back to you ASAP.
+                  Thank you for reaching out. Your entry has been successfully submitted, and we will get back to you ASAP.
                 </p>
                 <button 
                   onClick={() => setSubmitted(false)}
@@ -93,12 +124,13 @@ export default function Contact() {
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-wics-dark/60 mb-2">Your Name</label>
                   <input 
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    placeholder="Amazing WiCS Contributor"
-                    className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:border-wics-pink bg-slate-50/50 transition-all font-medium"
+                    type="text" 
+                    name="name"
+                    required 
+                    value={formData.name} 
+                    onChange={(e) => setFormData({...formData, name: e.target.value})} 
+                    placeholder="Amazing WiCS Contributor" 
+                    className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:border-wics-pink bg-slate-50/50 transition-all font-medium" 
                   />
                 </div>
 
@@ -106,12 +138,13 @@ export default function Contact() {
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-wics-dark/60 mb-2">Email Address</label>
                   <input 
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
-                    placeholder="supercoolperson@example.com"
-                    className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:border-wics-pink bg-slate-50/50 transition-all font-medium"
+                    type="email" 
+                    name="email"
+                    required 
+                    value={formData.email} 
+                    onChange={(e) => setFormData({...formData, email: e.target.value})} 
+                    placeholder="supercoolperson@example.com" 
+                    className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:border-wics-pink bg-slate-50/50 transition-all font-medium" 
                   />
                 </div>
 
@@ -120,17 +153,15 @@ export default function Contact() {
                   <label className="block text-xs font-bold uppercase tracking-wider text-wics-dark/60 mb-2">I am a...</label>
                   <div className="grid grid-cols-3 gap-3">
                     {["Student", "Sponsor", "Other"].map((role) => (
-                      <button
-                        type="button"
-                        key={role}
-                        onClick={() => setFormData({...formData, role})}
-                        className={`py-2 px-3 text-xs font-bold rounded-xl transition-all border ${
-                          formData.role === role
-                            ? "bg-wics-dark text-white border-wics-dark shadow-md"
-                            : "bg-white text-slate-500 border-slate-200 hover:bg-slate-50"
-                        }`}
-                      >
-                        {role}
+                      <button 
+                        type="button" 
+                        key={role} 
+                        onClick={() => setFormData({...formData, role})} 
+                        className={`py-2 px-3 text-xs font-bold rounded-xl transition-all border ${ 
+                          formData.role === role ? "bg-wics-dark text-white border-wics-dark shadow-md" : "bg-white text-slate-500 border-slate-200 hover:bg-slate-50" 
+                        }`} 
+                      > 
+                        {role} 
                       </button>
                     ))}
                   </div>
@@ -140,28 +171,29 @@ export default function Contact() {
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-wics-dark/60 mb-2">Your Message</label>
                   <textarea 
-                    rows="4"
-                    required
-                    value={formData.message}
-                    onChange={(e) => setFormData({...formData, message: e.target.value})}
-                    placeholder="How can we help?"
-                    className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:border-wics-pink bg-slate-50/50 transition-all font-medium resize-none"
+                    name="message"
+                    rows="4" 
+                    required 
+                    value={formData.message} 
+                    onChange={(e) => setFormData({...formData, message: e.target.value})} 
+                    placeholder="How can we help?" 
+                    className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:border-wics-pink bg-slate-50/50 transition-all font-medium resize-none" 
                   ></textarea>
                 </div>
 
-                {/* SUBMIT BUTTON */}
+                {/* SUBMIT BUTTON WITH LOADING STATE TEXT SWITCHING */}
                 <button 
-                  type="submit"
-                  className="w-full bg-wics-dark text-white font-bold py-3.5 rounded-xl transition-all hover:bg-wics-pink hover:shadow-lg hover:shadow-wics-pink/10 active:scale-95 shadow-md mt-2"
-                >
-                  Send Message
+                  type="submit" 
+                  disabled={loading}
+                  className="w-full bg-wics-dark text-white font-bold py-3.5 rounded-xl transition-all hover:bg-wics-pink hover:shadow-lg hover:shadow-wics-pink/10 active:scale-95 shadow-md mt-2 disabled:opacity-50" 
+                > 
+                  {loading ? "Sending..." : "Send Message"} 
                 </button>
               </form>
             )}
           </div>
 
         </div>
-
       </div>
     </Layout>
   )
