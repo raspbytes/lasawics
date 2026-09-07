@@ -156,6 +156,45 @@ function Home() {
       </div>
     </details>
 
+    {/* FAQ ITEM 3 */}
+    <details className="group overflow-hidden bg-white border border-slate-200/80 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:border-blue-200/40 [&_summary::-webkit-details-marker]:hidden">
+      <summary className="flex items-center justify-between p-5 font-bold text-slate-800 cursor-pointer select-none list-none transition-colors duration-300 group-open:bg-slate-50/60">
+        <span>What kinds of domains does WiCS work with?</span>
+        <span className="text-wics-magenta font-mono text-sm transition-transform duration-300 transform group-open:rotate-90">
+          ▶
+        </span>
+      </summary>
+      <div className="px-5 pb-5 pt-2 border-t border-slate-100/60 bg-white text-sm text-slate-500 leading-relaxed animate-fade-in">
+        Throughout the year, we aim to pilot a new initiative known as BUILD. There will be 5 tracks covered by different captains going over Basics of programming, User-centric design, Interdisciplinary CS, Logic and CP Algorithms, and finally, Discussing new technologies. All tracks will be supplemented with corresponding events or projects, and aim to give members a rounded view of the vast world of Computer Science. We'll also take member requests sporadically throughout the year.
+      </div>
+    </details>
+
+    {/* FAQ ITEM 4 */}
+    <details className="group overflow-hidden bg-white border border-slate-200/80 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:border-blue-200/40 [&_summary::-webkit-details-marker]:hidden">
+      <summary className="flex items-center justify-between p-5 font-bold text-slate-800 cursor-pointer select-none list-none transition-colors duration-300 group-open:bg-slate-50/60">
+        <span>What is the member hub?</span>
+        <span className="text-wics-magenta font-mono text-sm transition-transform duration-300 transform group-open:rotate-90">
+          ▶
+        </span>
+      </summary>
+      <div className="px-5 pb-5 pt-2 border-t border-slate-100/60 bg-white text-sm text-slate-500 leading-relaxed animate-fade-in">
+       The member hub located at the top right of this page is a centralized portal designed for registered members to access internal club assets such as resources, leaderboards, calendard, and blog/gallery posts. The password will be given at the first annual meeting.
+      </div>
+    </details>
+
+    {/* FAQ ITEM 5 */}
+    <details className="group overflow-hidden bg-white border border-slate-200/80 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:border-blue-200/40 [&_summary::-webkit-details-marker]:hidden">
+      <summary className="flex items-center justify-between p-5 font-bold text-slate-800 cursor-pointer select-none list-none transition-colors duration-300 group-open:bg-slate-50/60">
+        <span>How much time or cost commitment does this take?</span>
+        <span className="text-wics-magenta font-mono text-sm transition-transform duration-300 transform group-open:rotate-90">
+          ▶
+        </span>
+      </summary>
+      <div className="px-5 pb-5 pt-2 border-t border-slate-100/60 bg-white text-sm text-slate-500 leading-relaxed animate-fade-in">
+       The club is designed to be a landing spot and safe community for students of all backgrounds to explore CS. While we primarily meet weekly during lunch, we'll host other events throughout the year that are optional and meant as a fun way to supplement your learning. Participation in these events will be rewarded with points on our club leaderboard, which can lead to certain perks, though attendance at out-of-school events are never mandatory for being a member. There are no club fees or dues, and all materials, workshops, and events are fully free and open-source.
+      </div>
+    </details>
+
   </div>
 </section>
 
