@@ -3,10 +3,10 @@ import Layout from "../components/Layout"
 export default function Sponsors() {
   const tiers = [
     {
-      name: "Byte Tier",
+      name: "Node Tier",
       price: "$250",
-      accent: "border-slate-200",
-      bgBadge: "bg-slate-100 text-slate-700",
+      accent: "wics-dark",
+      bgBadge: "bg-wics-lime text-slate-900",
       description: "Perfect for local companies looking to kickstart their involvement with our community.",
       perks: [
         "Logo displayed on our official landing site footer",
@@ -15,26 +15,26 @@ export default function Sponsors() {
       ]
     },
     {
-      name: "Kilo Tier (Popular)",
+      name: "Vector Tier (Popular)",
       price: "$500",
       accent: "border-wics-pink ring-2 ring-wics-pink/20",
       bgBadge: "bg-wics-pink/10 text-wics-pink",
       description: "Direct student interaction framework. Ideal for recruitment and community presence.",
       perks: [
-        "All Byte tier perks included",
+        "All Node tier perks included",
         "Send 2 representatives to our End-of-Year Showcase event",
         "Host an exclusive technical workshop or panel for members",
         "Distribute company swag or pamphlets during club meetings"
       ]
     },
     {
-      name: "Mega Tier",
+      name: "Matrix Tier",
       price: "$1,000+",
       accent: "border-wics-magenta",
       bgBadge: "bg-wics-magenta/10 text-wics-magenta",
       description: "Complete chapter co-branding. Maximum visibility across all flagship hackathons and workshops.",
       perks: [
-        "All Kilo tier perks included",
+        "All Vector tier perks included",
         "Co-branding presence at our flagship local Hackathon",
         "Dedicated corporate judge slot on our project evaluation panels",
         "Large logo placement on all official custom club shirts"
@@ -52,10 +52,10 @@ export default function Sponsors() {
             Support Our Chapter
           </span>
           <h1 className="mt-4 text-4xl font-black tracking-tight text-wics-dark sm:text-5xl">
-            Sponsorship Packages
+            Sponsorship 
           </h1>
           <p className="mt-4 text-lg text-slate-500 leading-relaxed">
-            Invest in diversity in tech. Help us fund free software licenses, hardware kits, and hosting assets for our computing members.
+            If you are a company or organization looking to support our cause, consider looking into our sponsorship tiers. There are many ways to get involved, and we are always appreciative of new ideas. The sponsorship tiers below are designed to provide a range of options for all sizes of contributors.
           </p>
         </div>
 
