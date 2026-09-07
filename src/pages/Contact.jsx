@@ -43,19 +43,19 @@ export default function Contact() {
 
             <div className="space-y-4 font-medium text-sm text-slate-300">
               <div className="flex items-center gap-3">
-                <span className="text-lg"></span>
+                <span className="text-lg">✎</span>
                 <a href="mailto:lasawics@gmail.com" className="hover:text-wics-pink transition-colors">
                   lasawics@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <span className="text-lg">▪</span>
+                <span className="text-lg">⌖</span>
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-wics-magenta transition-colors">
                   @lasawics
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <span className="text-lg">▪</span>
+                <span className="text-lg">⚲</span>
                 <span>LASA High School • Rm. 505</span>
               </div>
             </div>
@@ -74,7 +74,7 @@ export default function Contact() {
           <div className="md:col-span-7 bg-white border border-slate-200/80 p-8 rounded-3xl shadow-xl shadow-slate-100/50">
             {submitted ? (
               <div className="text-center py-12 flex flex-col items-center animate-fade-in">
-                <span className="text-4xl">✨</span>
+                <span className="text-4xl">˗ˏˋ ꒰ ✉︎ ꒱ ˎˊ˗</span>
                 <h3 className="text-2xl font-black text-wics-dark mt-4">Message Sent!</h3>
                 <p className="text-sm text-slate-400 mt-2 max-w-sm">
                   Thank you for reaching out. Your entry has been succesfully submitted, and we will get back to you ASAP.
