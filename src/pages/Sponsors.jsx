@@ -1,46 +1,51 @@
 import Layout from "../components/Layout"
 
-export default function Sponsors() {
-  const tiers = [
-    {
-      name: "Node Tier",
-      price: "$250",
-      accent: "wics-dark",
-      bgBadge: "bg-wics-lime text-slate-900",
-      description: "Perfect for local companies looking to kickstart their involvement with our community.",
-      perks: [
-        "Logo displayed on our official landing site footer",
-        "Resumes booklet access from our active members pool",
-        "Social media shoutouts over our Instagram channels"
-      ]
-    },
-    {
-      name: "Vector Tier (Popular)",
-      price: "$500",
-      accent: "border-wics-pink ring-2 ring-wics-pink/20",
-      bgBadge: "bg-wics-pink/10 text-wics-pink",
-      description: "Direct student interaction framework. Ideal for recruitment and community presence.",
-      perks: [
-        "All Node tier perks included",
-        "Send 2 representatives to our End-of-Year Showcase event",
-        "Host an exclusive technical workshop or panel for members",
-        "Distribute company swag or pamphlets during club meetings"
-      ]
-    },
-    {
-      name: "Matrix Tier",
-      price: "$1,000+",
-      accent: "border-wics-magenta",
-      bgBadge: "bg-wics-magenta/10 text-wics-magenta",
-      description: "Complete chapter co-branding. Maximum visibility across all flagship hackathons and workshops.",
-      perks: [
-        "All Vector tier perks included",
-        "Co-branding presence at our flagship local Hackathon",
-        "Dedicated corporate judge slot on our project evaluation panels",
-        "Large logo placement on all official custom club shirts"
-      ]
-    }
-  ]
+const tiers = [
+  {
+    name: "Node Tier",
+    price: "$250",
+    /* 
+      🟢 THE LIME UPGRADE:
+      - We add 'border-wics-lime-200' (or whatever you named your lime theme key)
+      - We give it a subtle lime ring shadow just like your pink card!
+    */
+    accent: "border-wics-lime-200 ring-2 ring-wics-lime-200/20",
+    bgBadge: "bg-wics-lime-200/20 text-wics-dark font-bold",
+    description: "Perfect for local companies looking to kickstart their involvement with our community.",
+    perks: [
+      "Logo displayed on our official landing site footer",
+      "Resumes booklet access from our active members pool",
+      "Social media shoutouts over our Instagram channels"
+    ]
+  },
+  {
+    name: "Vector Tier (Popular)",
+    price: "$500",
+    accent: "border-wics-pink ring-2 ring-wics-pink/20",
+    bgBadge: "bg-wics-pink/10 text-wics-pink font-bold",
+    description: "Direct student interaction framework. Ideal for recruitment and community presence.",
+    perks: [
+      "All Node tier perks included",
+      "Send 2 representatives to our End-of-Year Showcase event",
+      "Host an exclusive technical workshop or panel for members",
+      "Distribute company swag or pamphlets during club meetings"
+    ]
+  },
+  {
+    name: "Matrix Tier",
+    price: "$1,000+",
+    accent: "border-wics-magenta ring-2 ring-wics-magenta/20", // Added a matching ring to matrix too!
+    bgBadge: "bg-wics-magenta/10 text-wics-magenta font-bold",
+    description: "Complete chapter co-branding. Maximum visibility across all flagship hackathons and workshops.",
+    perks: [
+      "All Vector tier perks included",
+      "Co-branding presence at our flagship local Hackathon",
+      "Dedicated corporate judge slot on our project evaluation panels",
+      "Large logo placement on all official custom club shirts"
+    ]
+  }
+]
+
 
   return (
     <Layout>
