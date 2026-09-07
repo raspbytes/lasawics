@@ -19,13 +19,13 @@ export default function Contact() {
         {/* TOP TITLE HEADER */}
         <div className="mb-12 text-center md:text-left">
           <span className="text-xs font-bold uppercase tracking-widest text-wics-pink bg-wics-pink/10 px-2.5 py-1 rounded-md">
-            Outreach Portal
+            Outreach Form
           </span>
           <h1 className="mt-4 text-4xl font-black tracking-tight text-wics-dark sm:text-5xl">
             Get in Touch
           </h1>
           <p className="mt-3 text-base text-slate-500 max-w-xl">
-            Have questions about workshops, guest speaking, or sponsorship packages? Drop us a line and our leadership team will get back to you!
+            Have questions about potential collaborations or outreach opportunities? Drop us a message through or form, or reach out otherwise. Our leadership team will get back to you ASAP!
           </p>
         </div>
 
@@ -37,35 +37,35 @@ export default function Contact() {
             <div>
               <h3 className="text-xl font-bold text-wics-lime">Direct Connect</h3>
               <p className="text-sm text-slate-400 mt-2 leading-relaxed">
-                Skip the form entirely if you prefer standard mailing clients.
+                Skip the form entirely if you prefer another method of contact.
               </p>
             </div>
 
             <div className="space-y-4 font-medium text-sm text-slate-300">
               <div className="flex items-center gap-3">
-                <span className="text-lg">📧</span>
+                <span className="text-lg"></span>
                 <a href="mailto:lasawics@gmail.com" className="hover:text-wics-pink transition-colors">
                   lasawics@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <span className="text-lg">📸</span>
+                <span className="text-lg">▪</span>
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-wics-magenta transition-colors">
                   @lasawics
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <span className="text-lg">📍</span>
+                <span className="text-lg">▪</span>
                 <span>LASA High School • Rm. 505</span>
               </div>
             </div>
 
             <div className="border-t border-slate-800 pt-6 mt-6">
               <p className="text-xs text-wics-magenta font-mono tracking-wider uppercase">
-                // response matrix
+                // Response Time
               </p>
               <p className="text-xs text-slate-400 mt-2 leading-relaxed">
-                We monitor incoming inquiries actively during the academic school year. Expect a turn-around message within 24-48 business hours.
+                We monitor our inboxes actively during the academic school year. Expect a reply within around 24-48 working hours!
               </p>
             </div>
           </div>
@@ -77,7 +77,7 @@ export default function Contact() {
                 <span className="text-4xl">✨</span>
                 <h3 className="text-2xl font-black text-wics-dark mt-4">Message Sent!</h3>
                 <p className="text-sm text-slate-400 mt-2 max-w-sm">
-                  Thank you for reaching out. Your entry has been securely buffered to our communications pipeline.
+                  Thank you for reaching out. Your entry has been succesfully submitted, and we will get back to you ASAP.
                 </p>
                 <button 
                   onClick={() => setSubmitted(false)}
@@ -97,7 +97,7 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    placeholder="Jane Doe"
+                    placeholder="Amazing WiCS Contributor"
                     className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:border-wics-pink bg-slate-50/50 transition-all font-medium"
                   />
                 </div>
@@ -110,7 +110,7 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
-                    placeholder="jane@example.com"
+                    placeholder="supercoolperson@example.com"
                     className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:border-wics-pink bg-slate-50/50 transition-all font-medium"
                   />
                 </div>
@@ -144,7 +144,7 @@ export default function Contact() {
                     required
                     value={formData.message}
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
-                    placeholder="How can we collaborate?"
+                    placeholder="How can we help?"
                     className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:border-wics-pink bg-slate-50/50 transition-all font-medium resize-none"
                   ></textarea>
                 </div>
