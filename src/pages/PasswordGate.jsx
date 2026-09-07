@@ -7,8 +7,8 @@ export default function PasswordGate() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [error, setError] = useState(false)
 
-  // 🔒 Define your secret club password here
-  const CLUB_PASSWORD = "lasawicspassword" 
+  
+  const CLUB_PASSWORD = "lasawics_2026" 
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -36,7 +36,7 @@ export default function PasswordGate() {
         
         <h2 className="mt-4 text-2xl font-black text-wics-dark">Members Portal</h2>
         <p className="text-sm text-slate-400 mt-1 px-4">
-          Enter the current chapter password to unlock internal club assets.
+          Enter the member-exclusive club password to unlock internal club assets.
         </p>
 
         <form onSubmit={handleSubmit} className="w-full mt-6 flex flex-col gap-3">
