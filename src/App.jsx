@@ -6,6 +6,7 @@ import About from "./pages/About"
 import PasswordGate from "./pages/PasswordGate" 
 import MembersHub from "./pages/MembersHub" 
 import Sponsors from "./pages/Sponsors" 
+import Contact from "./pages/Contact"
 
 function Home() { 
   const eventsSectionRef = useRef(null) 
@@ -101,6 +102,7 @@ export default function App() {
         <Route path="/about" element={<About />} /> 
         <Route path="/members" element={<PasswordGate />} /> 
         <Route path="/sponsors" element={<Sponsors />} /> 
+        <Route path="/contact" element={<Contact />} /> 
       </Routes> 
     </BrowserRouter> 
   ) 
