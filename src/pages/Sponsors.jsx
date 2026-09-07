@@ -1,13 +1,14 @@
 import Layout from "../components/Layout"
 
-// 1. Fixed: Restored the missing component wrapper declaration line
 export default function Sponsors() {
   const tiers = [
     { 
       name: "Node Tier", 
       price: "$250", 
-      accent: "border-wics-lime-200 ring-2 ring-wics-lime-200/20", 
-      bgBadge: "bg-wics-lime-200/20 text-wics-dark font-bold", 
+      /* 🟢 Fixed: Changed from wics-lime-200 to plain wics-lime to match your global index variable! */
+      accent: "border-wics-lime ring-2 ring-wics-lime/20", 
+      bgBadge: "bg-wics-lime/20 text-wics-dark font-black", 
+      bulletColor: "text-wics-dark/70", // 👈 Fixed: Explicitly passed down clean color string classes for your check marks
       description: "Perfect for local companies looking to kickstart their involvement with our community.", 
       perks: [ 
         "Logo displayed on our official landing site footer", 
@@ -19,7 +20,8 @@ export default function Sponsors() {
       name: "Vector Tier (Popular)", 
       price: "$500", 
       accent: "border-wics-pink ring-2 ring-wics-pink/20", 
-      bgBadge: "bg-wics-pink/10 text-wics-pink font-bold", 
+      bgBadge: "bg-wics-pink/10 text-wics-pink font-black", 
+      bulletColor: "text-wics-pink", // 👈 Fixed: Complete text color string for the pink arrows
       description: "Direct student interaction framework. Ideal for recruitment and community presence.", 
       perks: [ 
         "All Node tier perks included", 
@@ -32,7 +34,8 @@ export default function Sponsors() {
       name: "Matrix Tier", 
       price: "$1,000+", 
       accent: "border-wics-magenta ring-2 ring-wics-magenta/20", 
-      bgBadge: "bg-wics-magenta/10 text-wics-magenta font-bold", 
+      bgBadge: "bg-wics-magenta/10 text-wics-magenta font-black", 
+      bulletColor: "text-wics-magenta", // 👈 Fixed: Complete text color string for the magenta arrows
       description: "Complete chapter co-branding. Maximum visibility across all flagship hackathons and workshops.", 
       perks: [ 
         "All Vector tier perks included", 
@@ -56,7 +59,7 @@ export default function Sponsors() {
             Sponsorship
           </h1>
           <p className="mt-4 text-lg text-slate-500 leading-relaxed">
-            If you are a company or organization looking to support our cause, consider looking into our sponsorship tiers. There are many ways to get involved, and we are always appreciative of new ideas. The sponsorship tiers below are designed to provide a range of options for all sizes of contributors.
+            If you are a company or organization looking to support our cause, consider looking into our sponsorship tiers. There are many ways to get involved, and we are always appreciative of new ideas.
           </p>
         </div>
 
@@ -82,11 +85,10 @@ export default function Sponsors() {
 
                 {/* Benefits Bullet Rows */}
                 <ul className="mt-6 space-y-3.5 border-t border-slate-100 pt-6">
-                  {/* Fixed: Cleaned up the double curly bracket nesting issue here */}
                   {tier.perks.map((perk, pIndex) => (
                     <li key={pIndex} className="flex items-start gap-2.5 text-sm text-slate-600 leading-normal">
-                      {/* Fixed: Cleaned up the background string splitting formatting layout block */}
-                      <span className={`shrink-0 mt-0.5 text-xs ${tier.bgBadge.includes('text-wics-dark') ? 'text-wics-dark' : tier.bgBadge.includes('text-wics-pink') ? 'text-wics-pink' : 'text-wics-magenta'}`}>
+                      {/* 🛠️ FIXED ARROW LOOP: Reads the clear color configuration properties flawlessly now */}
+                      <span className={`shrink-0 mt-0.5 font-mono font-bold text-xs ${tier.bulletColor}`}>
                         &lt;/&gt;
                       </span>
                       <span>{perk}</span>
@@ -97,8 +99,7 @@ export default function Sponsors() {
 
               {/* Call to Action Trigger */}
               <div className="mt-8 pt-4">
-                {/* Fixed: Corrected the email address path formatting scheme */}
-                <a href="mailto:lasawics@://gmail.com">
+                <a href="mailto:lasawics@gmail.com">
                   <button className="w-full bg-wics-dark text-white font-bold py-3 px-4 rounded-xl transition-all hover:bg-wics-pink active:scale-95 shadow-md">
                     Become a Partner
                   </button>
